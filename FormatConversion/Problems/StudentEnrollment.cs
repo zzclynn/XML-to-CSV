@@ -40,8 +40,6 @@ namespace FormatConversion.Problems
 
                 while (reader.Read())
                 {
-                    Console.WriteLine(reader.Name);
-
                     if (reader.NodeType == XmlNodeType.Element
                         && reader.Name == "school")
                     {
@@ -129,6 +127,7 @@ namespace FormatConversion.Problems
                     }
                     studentCount++;
 
+                    // Put all of the information to the line builder Array
                     var lineBuilderArray = new string[] { schoolId, classroomId, classroomName,
                         teacherId[0], teacherLastName[0], teacherFirstName[0], teacherId[1], teacherLastName[1],
                         teacherFirstName[1], studentId, studentLastName, studentFirstName, studentGrade};
